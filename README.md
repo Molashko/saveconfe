@@ -38,7 +38,11 @@ pip install -r requirements.txt
 #### Автоматическое создание базы данных (рекомендуется)
 
 1. Убедитесь, что MySQL запущен
-2. Создайте файл `database.env` в корне проекта:
+2. Скопируйте файл `database.env.example` в `database.env`:
+```bash
+copy database.env.example database.env
+```
+3. Откройте `database.env` и укажите ваши данные MySQL:
 ```env
 DB_HOST=localhost
 DB_PORT=3306
@@ -47,7 +51,7 @@ DB_PASSWORD=ваш_пароль_root
 DB_NAME=saveconfe
 ```
 
-3. Запустите скрипт создания базы данных:
+4. Запустите скрипт создания базы данных:
 ```bash
 python setup_database.py
 ```
